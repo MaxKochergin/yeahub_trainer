@@ -1,0 +1,134 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl); 
+  box-sizing: border-box;
+  width: 100%;
+  padding: var(--space-lg); 
+  border-radius: var(--radius-card); 
+  background-color: var(--color-bg-card);
+  box-shadow: var(--shadow-card);
+}
+
+.title {
+  margin: 0;
+  font-family: var(--font-family);
+  font-size: var(--font-size-h1); 
+  font-weight: 500;
+  line-height: var(--line-height-text);
+  color: var(--color-text-primary);
+}
+
+.columns {
+  display: flex;
+  gap: 138px; 
+  align-items: flex-start;
+  width: 100%;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg); 
+  flex: 1 1 621px;
+  min-width: 0;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg); 
+  flex: 0 0 408px;
+  width: 408px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm); 
+}
+
+.sectionTitle {
+  margin: 0;
+  font-family: var(--font-family);
+  font-size: var(--font-size-label); 
+  font-weight: 400;
+  line-height: var(--line-height-text);
+  color: var(--color-text-secondary); 
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm); 
+}
+
+.error {
+  margin: 0;
+  font-family: var(--font-family);
+  font-size: var(--font-size-small); // 12
+  line-height: var(--line-height-text);
+  color: var(--color-error);
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; 
+  gap: var(--space-sm);
+  width: 100%;
+}
+
+.button {
+  gap: var(--space-sm); 
+}
+
+.button img {
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+@media (max-width: 1024px) {
+  .columns {
+    gap: var(--space-xl);
+  }
+
+  .right {
+    flex: 0 0 320px;
+    width: 320px;
+  }
+}
+
+@media (max-width: 768px) {
+  .root {
+    gap: 20px;
+    padding: 20px 10px;
+    border-radius: 24px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .columns {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .left,
+  .right {
+    flex: 1 1 auto;
+    width: 100%;
+    gap: 16px;
+  }
+
+  .actions {
+    align-items: flex-end;
+  }
+
+  .button {
+    width: 170px;
+    justify-content: center;
+  }
+}

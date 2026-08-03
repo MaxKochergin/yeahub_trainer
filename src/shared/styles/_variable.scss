@@ -1,0 +1,47 @@
+:root {
+    /* Colors */
+    --color-bg-page: #f7f7f7;
+    --color-bg-card: #ffffff;
+    --color-primary: #6a0bff;
+    --color-primary-hover: #5509cc;
+    --color-primary-light: #f0e7ff;
+    --color-text-primary: #191919;
+    --color-text-secondary: #474747;
+    --color-text-tag: #303030;
+    --color-text-disabled: #bababa;
+    --color-text-on-primary: #ffffff;
+    --color-border-default: #bababa;
+    --color-border-light: #e8e8e8;
+    --color-border-active: #6a0bff;
+    --color-skeleton: #e8e8e8;
+    --color-error: #d32f2f;
+    --color-danger: #f3164e;
+    --color-danger-bg: #fdd8e1;
+    --color-donut-progress: #28a745;
+    --color-donut-track: #fffaec;
+  
+    /* Typography */
+    --font-family: "Manrope", sans-serif;
+    --font-size-h1: 24px;
+    --font-size-label: 14px;
+    --font-size-body: 16px;
+    --font-size-small: 12px;
+    --line-height-text: 1.2;
+    --line-height-button: 1.1;
+  
+    /* Radius */
+    --radius-card: 24px;
+    --radius-button: 12px;
+    --radius-tag: 12px;
+  
+    /* Spacing */
+    --space-xs: 4px;
+    --space-sm: 8px;
+    --space-md: 12px;
+    --space-lg: 24px;
+    --space-xl: 48px;
+  
+    /* Layout */
+    --content-max-width: 1216px;
+    --shadow-card: 0 4px 10px rgba(106, 99, 118, 0.1);
+  }

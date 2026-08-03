@@ -1,0 +1,97 @@
+.root {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas:
+    "title link"
+    "cards cards";
+  gap: var(--space-lg);
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  padding: var(--space-lg);
+  border-radius: var(--radius-card);
+  background-color: var(--color-bg-card);
+  box-shadow: var(--shadow-card);
+}
+
+.title {
+  grid-area: title;
+  margin: 0;
+  font-family: var(--font-family);
+  font-size: var(--font-size-h1);
+  font-weight: 600;
+  line-height: var(--line-height-text);
+  color: #000000;
+}
+
+.statsLink {
+  grid-area: link;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  flex-shrink: 0;
+  justify-self: end;
+  border: none;
+  background: none;
+  padding: 0;
+  font-family: var(--font-family);
+  font-size: var(--font-size-label);
+  font-weight: 600;
+  line-height: var(--line-height-button);
+  color: var(--color-primary);
+  cursor: pointer;
+}
+
+.statsIcon {
+  display: block;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  background-color: currentColor;
+  mask-image: url("@/shared/assets/ArrowRight.svg");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+  -webkit-mask-image: url("@/shared/assets/ArrowRight.svg");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+}
+
+.cards {
+  grid-area: cards;
+  display: grid;
+  grid-template-columns: minmax(0, 471fr) minmax(0, 677fr);
+  gap: var(--space-lg);
+  align-items: stretch;
+}
+
+@media (max-width: 900px) {
+  .root {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "title"
+      "cards"
+      "link";
+    gap: 20px;
+    padding: 20px 10px;
+    border-radius: 12px;
+    justify-items: stretch;
+  }
+
+  .title {
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .statsLink {
+    justify-self: center;
+    font-weight: 500;
+    font-size: 16px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}

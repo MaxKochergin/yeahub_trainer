@@ -1,0 +1,163 @@
+.root {
+  width: 100%;
+  background-color: var(--color-bg-card);
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  max-width: var(--content-max-width);
+  height: 80px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  min-width: 0;
+}
+
+.logo {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  text-decoration: none;
+
+  img {
+    display: block;
+    height: 32px;
+    width: auto;
+  }
+}
+
+.brandTitle {
+  display: none;
+  align-items: center;
+  gap: var(--space-xs);
+  font-family: var(--font-family);
+  font-size: var(--font-size-body);
+  font-weight: 500;
+  line-height: var(--line-height-text);
+  color: var(--color-text-primary);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.brandChevron {
+  display: block;
+  width: 16px;
+  height: 16px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+
+  a {
+    font-family: var(--font-family);
+    font-size: var(--font-size-body);
+    font-weight: 500;
+    line-height: var(--line-height-text);
+    color: var(--color-text-primary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: var(--color-text-secondary);
+    }
+  }
+}
+
+.action {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.registerButton {
+  width: 170px;
+}
+
+.burger {
+  display: none;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+
+  img {
+    display: block;
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.mobileMenu {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .container {
+    height: 54px;
+    padding: 0 10px;
+  }
+
+  .brandTitle {
+    display: inline-flex;
+  }
+
+  .nav,
+  .action {
+    display: none;
+  }
+
+  .burger {
+    display: inline-flex;
+  }
+
+  .mobileMenu {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    padding: var(--space-md) 10px var(--space-lg);
+    border-top: 1px solid var(--color-border-light);
+    background-color: var(--color-bg-card);
+  }
+
+  .mobileNav {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+
+    a {
+      font-family: var(--font-family);
+      font-size: var(--font-size-body);
+      font-weight: 500;
+      line-height: var(--line-height-text);
+      color: var(--color-text-primary);
+      text-decoration: none;
+    }
+  }
+
+  .mobileAction {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+  }
+
+  .registerButton {
+    width: auto;
+  }
+}

@@ -1,0 +1,53 @@
+.root {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 240px;
+  height: 240px;
+}
+
+.svg {
+  display: block;
+  transform: rotate(-90deg);
+}
+
+.track,
+.progress {
+  fill: none;
+  stroke-linecap: round;
+}
+
+.track {
+  stroke: var(--color-donut-track);
+}
+
+.progress {
+  stroke: var(--color-donut-progress);
+  transition: stroke-dashoffset 0.3s ease;
+}
+
+.center {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xs);
+  text-align: center;
+}
+
+.percent {
+  font-family: var(--font-family);
+  font-size: 28px;
+  font-weight: 700;
+  line-height: var(--line-height-text);
+  color: var(--color-text-primary);
+}
+
+.label {
+  font-family: var(--font-family);
+  font-size: var(--font-size-small);
+  font-weight: 500;
+  line-height: var(--line-height-text);
+  color: var(--color-text-secondary);
+}

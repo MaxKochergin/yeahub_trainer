@@ -1,0 +1,1 @@
+export {TrainerSettingsPage} from './ui/TrainerSettingsPage'

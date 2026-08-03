@@ -1,0 +1,14 @@
+.root {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.message {
+  margin: 0;
+  font-family: var(--font-family);
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-text);
+  color: var(--color-text-secondary);
+}

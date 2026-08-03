@@ -1,0 +1,78 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 100%;
+  padding: var(--space-lg);
+  border-radius: var(--radius-card);
+  background-color: var(--color-bg-card);
+}
+
+.title {
+  margin: 0;
+  font-family: var(--font-family);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: var(--line-height-text);
+  color: var(--color-text-primary);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.rowHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  font-family: var(--font-family);
+  font-size: var(--font-size-label);
+  line-height: 1.5;
+}
+
+.skillTitle,
+.skillValue {
+  color: var(--color-text-tag);
+  font-weight: 500;
+}
+
+.skillValue {
+  flex-shrink: 0;
+}
+
+.progressBar {
+  height: 12px;
+  border-radius: 6px;
+  background-color: var(--color-primary-light);
+}
+
+.progressBar > div {
+  border-radius: 6px;
+}
+
+@media (max-width: 900px) {
+  .root {
+    padding: 20px 10px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-card);
+  }
+
+  .title {
+    font-size: 16px;
+    font-weight: 500;
+  }
+}
